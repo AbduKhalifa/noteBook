@@ -1,0 +1,213 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root{
+    --main-color:#8AC53F;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+main{
+    padding: 120px;
+    position: relative;
+}
+main .parent{
+    width: 80%;
+    margin: auto;
+    color: var(--main-color);
+}   
+h1{
+    margin: 0 0 20px 0;
+}
+@media (max-width:768px) {
+    main{
+        padding: 50px 20px;
+    }
+    main .parent{
+        width: 100%;
+    }  
+    h1{
+        text-align: center;
+    }
+}
+main .content{
+    margin: 15px 0 30px 0;
+    background-color: #EEE;
+    padding: 25px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+main .content .animtion-color{
+    z-index: 2;
+    position: absolute;
+    top: -100px;
+    left: -1000px;
+    width: 80%;
+    height: 200%;
+    transform: rotate(9deg);
+    background: linear-gradient(to right,#00000000 0%,#8ac53f82 50%,#00000000 100%);
+    animation-name: left-right;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+}
+@keyframes left-right {
+    from{
+        left: -1000px; 
+    }
+    to{
+        left: calc(170%);
+    }
+}
+.input-field .write{
+    margin: 16px 0;
+    position: relative;
+}
+.input-field .write .icon{
+    position: absolute;
+    top: 0px;
+    left: -34px ;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #eee;
+    overflow: hiddena;
+    transition: 600ms;
+}
+.input-field .write .icon span{
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 99%;
+    transform-origin: left bottom;
+    transform: translate(-91%,-50%)rotate(0deg);
+    transform-origin: left center;
+    width: 50%;
+    height: 2.5px;
+    background-color: black;
+}
+.input-field input{
+    width: 100%;
+    font-size: 18px;
+    border: solid 1px var(--main-color);
+    outline: none;
+    padding: 5px;
+    transition: border 600ms ;
+    transform: rotate(0deg);
+    color: #999999;
+    transition: box-shadow 600ms;
+    position: relative;
+    z-index: 3;
+}
+.input-field .write input:focus{
+    box-shadow: 0px 6px 14px -8px #00000061
+}
+.input-field .write input:focus ~ .icon{
+    background-color: var(--main-color);
+}
+.input-field .write input:focus ~ .icon span{
+   animation-name: spin;
+   animation-duration: 1000ms;
+   animation-direction:normal;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite; 
+}
+@keyframes spin {
+    from{
+        transform: translate(-91%,-50%)rotate(0deg);
+        
+    }
+    to{
+        transform: translate(-91%,-50%)rotate(360deg);
+    }
+}
+.input-field button{
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #EEE;
+    outline: none;
+    border: none;
+    background-color: #2D2D2D;
+    transition: background-color 400ms;
+    position: relative;
+    z-index: 3;
+
+}
+.input-field button:hover{
+    background-color: #2d2d2d99;
+}
+
+.row-of-books{
+    padding: 30px;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    background:linear-gradient(to bottom,#EEE 40%,#2d2d2d73 100%);
+}
+h6{
+    font-size: 17px;
+    margin: 0;
+    color: #2D2D2D;
+}
+.row-of-books > div {
+    display: flex;
+    margin: 15px 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width:370px) {
+    .row-of-books > div {
+        display: flex;
+        margin: 15px 0 15px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    h6{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+button{
+    cursor: pointer;
+    font-size: 17px;
+    padding: 6px 14px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #eee;
+}
+button a{
+    text-decoration: none;
+    color: inherit;
+}
+.visit-book{
+    background-color: #2D2D2D;
+    margin-right: 8px;
+    transition: background-color 400ms;
+}
+.visit-book:hover{
+    background-color: #2d2d2d99;
+}
+.delete-book{
+    background-color: red;
+    transition: background-color 400ms;
+}
+.delete-book:hover{
+    background-color: rgba(255, 0, 0, 0.496);
+}
+footer{
+    padding: 30px 30px 30px 0;
+    font-size: 18px;
+    color: #999999;
+}

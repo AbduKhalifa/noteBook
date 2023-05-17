@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9 JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="parent">
+            <div class="title">
+                <h1>Book in your pocket</h1>
+            </div>
+            <hr>
+            <div class="content">
+                <div class="animtion-color">
+
+                </div>
+                <div class="input-field">
+                    <h2>Book in your pocket your favorite sites</h2>
+                    <label for="siteName">Site Name</label>
+                    <div class="write">
+                        <input type="text" id="siteName" name="siteName">
+                        <div class="icon"><span></span></div>
+                    </div>
+                    <label for="siteUrl">Site URL</label>
+                    <div class="write">
+                        <input type="text" id="siteUrl" name="siteUrl">
+                        <div class="icon"><span></span></div>
+                    </div>
+                    <div>
+                        <button onclick="addBook()">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row-of-books" id="rowOfBooks">
+            </div>
+            <hr>
+            <footer>
+                © 2023 Abdu Khalifa(Grand) Inc.
+            </footer>
+        </div>
+
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
